@@ -1,20 +1,17 @@
 import { Scene, GameObjects } from 'phaser';
 
-export class MainMenu extends Scene
-{
+export class MainMenu extends Scene {
     background: GameObjects.Image;
     logo: GameObjects.Image;
     title: GameObjects.Text;
 
-    constructor ()
-    {
+    constructor() {
         super('MainMenu');
     }
 
-    create ()
-    {
+    create() {
         this.logo = this.add.image(512, 300, 'logo');
- 	this.logo.setScale(0.25);
+        this.logo.setScale(0.25);
 
         this.title = this.add.text(512, 460, 'Start', {
             fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
